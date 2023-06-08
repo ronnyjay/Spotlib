@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Spotify";
+  src: url("https://encore.scdn.co/fonts/CircularSp-Book-4eaffdf96f4c6f984686e93d5d9cb325.woff2");
+}
+
+@font-face {
+  font-family: "Spotify-Clean";
+  src: url("https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Black.woff2");
+}
+
+@font-face {
+  font-family: "Spotify-Bold";
+  src: url("https://encore.scdn.co/fonts/CircularSp-Bold-fe1cfc14b7498b187c78fa72fb72d148.woff2");
+}
+
+body {
+  background: linear-gradient(to bottom left, rgb(0, 0, 54), #311c00);
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Spotify";
+  padding: 20px;
+}
+
+.titlebar {
+  position: fixed;
+  top: 7px;
+  right: 25px;
+  cursor: default;
+  scale: 2;
+}
+
+.titlebar img {
+  width: 6px;
+}
+
+.theme-select {
+  position: fixed;
+  top: 7px;
+  left: 25px;
+  scale: 2;
+}
+
+.theme-select img {
+  width: 6px;
+  transform: rotate(-135deg);
+}
+
+.warning {
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.continue {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.continue-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.continue-container button {
+  border-radius: 120px;
+  border: 0px transparent;
+  height: 25px;
+  width: 225px;
+  background-color: #ffffff;
+  font-size: 12px;
+  font-family: "Spotify-Clean";
+  cursor: default;
+  transition: all 0.2s ease-in-out;
+  -webkit-app-region: no-drag;
+  letter-spacing: 2px;
+  margin-top: -5px;
+}
+
+.continue-container button:active {
+  opacity: 50%;
+}

@@ -1,0 +1,6 @@
+body {
+    background: linear-gradient(to bottom left, rgb(0, 0, 54), #311c00);
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 20px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../styles/verification.css" type="text/css" />
+    <link
+      id="theme-style"
+      rel="stylesheet"
+      href="../styles/themes/sunset.css"
+      type="text/css"
+    />
+    <script src="../scripts/theme.js"></script>
+    <title>Spotlib v1.0.0</title>
+  </head>
+  <body>
+    <div class="theme-select"></div>
+    <div class="titlebar" id="titlebar-container">
+      <img
+        src="../../assets/images/icons/greyed_t.png"
+        onmouseover="titlebarSetter();"
+        onmouseout="titlebarDefault();"
+        onclick="confirmation.maximize()"
+        alt=""
+      />
+      <img
+        src="../../assets/images/icons/min_st.png"
+        onmouseover="titlebarSetter();"
+        onmouseout="titlebarDefault();"
+        onclick="confirmation.minimize()"
+        alt=""
+      />
+      <img
+        src="../../assets/images/icons/exit_st.png"
+        onmouseover="titlebarSetter();"
+        onmouseout="titlebarDefault();"
+        onclick="confirmation.close()"
+        alt=""
+      />
+    </div>
+    <script src="../scripts/theme.js"></script>
+    <script src="../scripts/titlebar.js"></script>
+    <div class="warning">
+      <span>Warning: this action is irreversible.</span>
+    </div>
+    <!-- <div class="continue">
+        <span>Are you sure you would like to continue?</span>
+    </div> -->
+    <div class="continue-container">
+      <button type="button" id="continue" onclick="confirmation.confirm()">
+        CONTINUE
+      </button>
+    </div>
+  </body>
+</html>

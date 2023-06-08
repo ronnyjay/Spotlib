@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../styles/tracks.css" />
+    <link
+      id="theme-style"
+      rel="stylesheet"
+      href="../styles/themes/sunset.css"
+      type="text/css"
+    />
+    <title>Spotlib v1.0.0</title>
+  </head>
+  <div class="wrapper">
+    <body>
+      <div class="theme-select">
+        <img
+          src="../../assets/images/icons/theme.png"
+          id="theme-selector"
+          alt=""
+        />
+        <div class="theme-dropdown" id="dropdown">
+          <img
+            src="../../assets/images/icons/default.png"
+            id="theme-sunset"
+            alt=""
+          />
+          <img
+            src="../../assets/images/icons/rw.png"
+            id="theme-velvet"
+            alt=""
+          />
+          <img
+            src="../../assets/images/icons/charcoal.png"
+            id="theme-charcoal"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="titlebar" id="titlebar-container">
+        <img
+          src="../../assets/images/icons/greyed_t.png"
+          onmouseover="titlebarSetter();"
+          onmouseout="titlebarDefault();"
+          onclick="pages.maximize()"
+          alt=""
+        />
+        <img
+          src="../../assets/images/icons/min_st.png"
+          onmouseover="titlebarSetter();"
+          onmouseout="titlebarDefault();"
+          onclick="pages.minimize()"
+          alt=""
+        />
+        <img
+          src="../../assets/images/icons/exit_st.png"
+          onmouseover="titlebarSetter();"
+          onmouseout="titlebarDefault();"
+          onclick="pages.close()"
+          alt=""
+        />
+      </div>
+      <script src="../scripts/theme.js"></script>
+      <script src="../scripts/titlebar.js"></script>
+      <div class="header-container">
+        <div class="header">
+          <div class="logo">
+            <span>Spotlib</span>
+          </div>
+        </div>
+        <div class="info" id="info">
+          <span id="playlist-info"></span>
+        </div>
+      </div>
+      <div class="tracks-showcase-container" id="tracks-showcase"></div>
+      <div class="playlist-options">
+        <div class="sort-options">
+          <form id="sort-form">
+            <div class="sortingoptions">
+              <label for="sort-type" class="form-option">SORT BY:</label>
+              <select
+                id="sort-type"
+                name="sort-type"
+                onchange="previewFormData(event)"
+                class="selector"
+              >
+                <option value="artist">Artist</option>
+                <option value="track">Track</option>
+                <option value="album">Album</option>
+                <option value="danceability">Danceability</option>
+                <option value="key">Key</option>
+              </select>
+            </div>
+            <div class="sortingorder">
+              <label for="sort-order" class="form-option">SORT ORDER:</label>
+              <select
+                id="sort-order"
+                name="sort-order"
+                onchange="previewFormData(event)"
+                class="selector"
+              >
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+              </select>
+            </div>
+            <div class="sortingsettings">
+              <label for="sort-method" class="form-option">SETTINGS:</label>
+              <input
+                type="radio"
+                id="sort-method-clone"
+                name="sort-method"
+                value="clone"
+              />
+              <label for="sort-method-clone" class="selector">Clone</label>
+              <input
+                type="radio"
+                id="sort-method-modify"
+                name="sort-method"
+                value="modify"
+              />
+              <label for="sort-method-modify" class="selector">Modify</label>
+
+              <button class="btn-spotify">Sort</button>
+            </div>
+          </form>
+          <script src="../scripts/sort.js"></script>
+        </div>
+      </div>
+      <div class="back">
+        <button id="back" class="btn-spotify-back" onclick="pages.back()">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+      </div>
+    </body>
+  </div>
+</html>

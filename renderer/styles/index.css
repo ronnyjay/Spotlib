@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Spotify";
+  src: url("https://encore.scdn.co/fonts/CircularSp-Book-4eaffdf96f4c6f984686e93d5d9cb325.woff2");
+}
+
+@font-face {
+  font-family: "Spotify-Clean";
+  src: url("https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Black.woff2");
+}
+
+@font-face {
+  font-family: "Spotify-Bold";
+  src: url("https://encore.scdn.co/fonts/CircularSp-Bold-fe1cfc14b7498b187c78fa72fb72d148.woff2");
+}
+
+body {
+  background: linear-gradient(to bottom left, rgb(0, 0, 54), #311c00);
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+/* Custom title bar because no os is the same it just looks better */
+.titlebar {
+  position: fixed;
+  top: 7px;
+  right: 25px;
+  cursor: default;
+  scale: 2;
+}
+
+.titlebar img {
+  width: 6px;
+}
+
+.theme-select {
+  position: fixed;
+  top: 7px;
+  left: 25px;
+  transform: scale(2);
+}
+
+.theme-select:nth-child(2) {
+  display: none;
+}
+
+.theme-select:hover .theme-dropdown {
+  display: flex;
+  animation: extend 2s ease;
+}
+
+.theme-select:hover img {
+  transform: scale(1.2);
+}
+
+.theme-select img {
+  width: 6px;
+  transform: rotate(-135deg);
+  transition: all 1s ease;
+}
+
+.theme-select img:hover {
+  transform: scale(1.2) rotate(0deg);
+}
+
+.theme-dropdown {
+  position: fixed;
+  top: 6.4px;
+  left: -2px;
+  background-color: rgba(116, 114, 114, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-width: 60px;
+  min-height: 10px;
+  display: none;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease;
+}
+
+.theme-dropdown img {
+  margin: 2px;
+  max-height: 6px;
+  width: 6px;
+  transition: transform 0.7s ease;
+}
+
+.theme-dropdown img:hover {
+  transform: scale(1.2) rotate(180deg);
+}
+
+@keyframes extend {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    width: auto;
+    height: auto;
+    opacity: 1;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: auto;
+    height: auto;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+#theme-sunset {
+  margin-left: 17px;
+  rotate: 70deg;
+}
+
+#theme-velvet {
+  margin-left: 6px;
+}
+
+#theme-skies {
+  margin-left: 6px;
+}
+
+#theme-charcoal {
+  margin-left: 6px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  -webkit-app-region: drag;
+}
+
+.header-container span {
+  color: white;
+  font-family: "Spotify-Bold";
+  font-size: 50px;
+}
+
+.connect-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.connect-container button {
+  border-radius: 120px;
+  border: 0px transparent;
+  height: 50px;
+  width: 420px;
+  background-color: #ffffff;
+  color: black;
+  font-size: 20px;
+  font-family: "Spotify-Clean";
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  -webkit-app-region: no-drag;
+  letter-spacing: 2px;
+}
+
+.connect-container button:active {
+  opacity: 50%;
+}

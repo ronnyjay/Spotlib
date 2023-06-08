@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/tracks_new.css">
+    <script src="../scripts/theme.js"></script>
+    <title>Spotlib v1.0.0 Unstable - Developed on Ubuntu 20.04.5 LTS</title>
+</head>
+<body>
+    <div class="titlebar">
+        <img src="../../assets/images/icons/min_st.png" onmouseover="this.src='../../assets/images/icons/min_t.png'" onmouseout="this.src='../../assets/images/icons/min_st.png'"onclick="pages.minimize()" alt="">
+        <img src="../../assets/images/icons/max_st.png" onmouseover="this.src='../../assets/images/icons/max_t.png'" onmouseout="this.src='../../assets/images/icons/max_st.png'" onclick="pages.maximize()"alt="">
+        <img src="../../assets/images/icons/exit_st.png" onmouseover="this.src='../../assets/images/icons/exit_t.png'" onmouseout="this.src='../../assets/images/icons/exit_st.png'" onclick="pages.close()" alt="">
+    </div>
+    <div class="header-container">
+        <div class="header">
+            <div class="logo">
+                <span>Spotlib</span>
+            </div>
+        </div>
+        <div class="info" id="info">
+            <span id="playlist-info"></span>
+        </div>
+    </div>
+    <div class="tracks-showcase-container">
+        <div class="empty-showcase">
+            <h3>It appears this playlist is empty.</h3>
+        </div>
+        <!-- <ul>
+            <li>
+                <div class="track-image">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228" alt="">
+                </div>
+                <div class="track-title">
+                    <span>Example Track</span>
+                    <div class="track-artist">
+                        <span>Example Artist</span>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <div class="track-image">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228" alt="">
+                </div>
+                <div class="track-title">
+                    <span>Example Track</span>
+                    <div class="track-artist">
+                        <span>Example Artist</span>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <div class="track-image">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228" alt="">
+                </div>
+                <div class="track-title">
+                    <span>Example Track</span>
+                    <div class="track-artist">
+                        <span>Example Artist</span>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <div class="track-image">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228" alt="">
+                </div>
+                <div class="track-title">
+                    <span>Example Track</span>
+                    <div class="track-artist">
+                        <span>Example Artist</span>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <div class="track-image">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228" alt="">
+                </div>
+                <div class="track-title">
+                    <span>Example Track</span>
+                    <div class="track-artist">
+                        <span>Example Artist</span>
+                    </span>
+                </span>
+            </li>
+        </ul> -->
+    </div>
+    <div class="playlist-options">
+        <div class="sort-options">
+            <form id="sort-form">
+                <label for="sort-type" class="form-option">SORT BY:</label>
+                <select id="sort-type" name="sort-type" class="selector">
+                    <option value="artist">Artist A-Z</option>
+                    <option value="track">Track A-Z</option>
+                    <option value="album">Album A-Z</option>
+                    <option value="danceability">Danceability</option>
+                    <option value="key">Key</option>
+                </select>
+                
+                <label for="sort-order" class="form-option">SORT ORDER:</label>
+                <select id="sort-order" name="sort-order" class="selector">
+                    <option value="asc">Low to High</option>
+                    <option value="desc">High to Low</option>
+                </select>
+                
+                <label for="sort-method" class="form-option">SETTINGS:</label>
+                <input type="radio" id="sort-method-clone" name="sort-method" value="clone">
+                <label for="sort-method-clone" class="selector">Clone</label>
+                <input type="radio" id="sort-method-modify" name="sort-method" value="modify">
+                <label for="sort-method-modify" class="selector">Modify</label>
+                
+                <button class="btn-spotify">Sort</button>
+            </form>
+            <script src="../scripts/sort.js"></script>
+        </div>
+    </div>
+    <div class="back">
+        <button id="back" class="btn-spotify-back" onclick="pages.back()">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+    </div>  
+</body>
+</html>
