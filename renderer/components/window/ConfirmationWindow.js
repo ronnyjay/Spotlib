@@ -20,7 +20,6 @@ module.exports = class confirmationWindow {
     });
 
     this.#eventEmitter = new EventEmitter();
-
     this.loadDefault();
   }
 

@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", async function () {
   var velvetThemeButton = document.getElementById("theme-velvet");
   var charcoalThemeButton = document.getElementById("theme-charcoal");
 
+  if (!defaultThemeButton || !velvetThemeButton || !charcoalThemeButton) {
+    return;
+  }
+
   defaultThemeButton.addEventListener("click", function () {
     currentIndex = 0;
     themeStyle.setAttribute("href", "../styles/themes/" + themes[currentIndex]);
